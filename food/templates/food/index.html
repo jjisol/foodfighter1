@@ -1,0 +1,60 @@
+{% extends 'food/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<main role="main">
+    <div class="container">
+      <img src="{% static 'img/banner.png' %}" class="img-fluid" width=1200px height=500px >
+    </div>
+    <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <a href="{% url 'korean_food_list' %}"><img src="{% static 'img/korean.jpg' %}" class="img-fluid" alt="Responsive" ><a>
+                <div class="card-body">
+                  <p class="card-text"><center><p>한식</p><p>떡볶이, 제육볶음, 냉면, 김밥 등 </p></center></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <a href="{% url 'western_food_list' %}"><img src="{% static 'img/western.jpg' %}" class="img-fluid" alt="Responsive" ></a>
+                <div class="card-body">
+                  <p class="card-text"><center><p>양식</p><p>피자, 치킨, 파스타 등 </p></center></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+               <a href="{% url 'chinese_food_list' %}"><img src="{% static 'img/china.jpg' %}" class="img-fluid" alt="Responsive" ></a>
+               <div class="card-body">
+                 <p class="card-text"><center><p>중식</p><p>짜장면, 짬뽕, 마라탕 등 </p></center></p>
+               </div>
+             </div>
+            </div>
+            </div>
+            <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <a href="{% url 'japanese_food_list' %}"><img src="{% static 'img/japan.jpg' %}" class="img-fluid" alt="Responsive" ></a>
+                <div class="card-body">
+                  <p class="card-text"><center><p>일식</p><p>초밥, 회, 돈까스 등</p></center></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <a href="{% url 'etc_food_list' %}"><img src="{% static 'img/sul.jpg' %}" class="img-fluid" alt="Responsive" ></a>
+                <div class="card-body">
+                  <p class="card-text"><center><p>기타</p><p>술집, 카페 등</p></center></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    {% endblock %}
